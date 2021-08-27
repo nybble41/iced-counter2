@@ -32,8 +32,7 @@ impl Sandbox for Counter {
         String::from("Counter - Iced")
     }
 
-    fn update(&mut self, message: Self::Message) {
-        let Callback(f) = message;
+    fn update(&mut self, Callback(f): Self::Message) {
         f(self)
     }
 
